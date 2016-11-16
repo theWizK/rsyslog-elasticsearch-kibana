@@ -54,7 +54,8 @@ COPY kibana/config-dashboards.json /root/.firstrun/kibana-config-dashboards.json
 COPY kibana/kibana.sh /opt/kibana/bin/kibana.sh
 RUN chmod +x /opt/kibana/bin/kibana.sh
 
-VOLUME /var/lib/elasticsearch
+# I want to be able to host-mount the elasticsearch directory
+#VOLUME /var/lib/elasticsearch
 
 EXPOSE 514 514/udp 5601
 
