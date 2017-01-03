@@ -12,7 +12,7 @@ for i in /root/.firstrun/kibana-config-*.json; do
 done
 
 pushd /usr/share/elasticsearch
-    bin/plugin royrusso/elasticsearch-HQ --url file:///tmp/elastichq-master.zip
+    bin/plugin --install royrusso/elasticsearch-HQ --url file:///tmp/elastichq-master.zip
 popd
 
 touch '/root/.firstrun/done'
