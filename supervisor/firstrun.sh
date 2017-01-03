@@ -11,5 +11,9 @@ for i in /root/.firstrun/kibana-config-*.json; do
     [ $ret -ne 0 ] && exit $ret
 done
 
+pushd /usr/share/elasticsearch
+    bin/plugin royrusso/elasticsearch-HQ --url file:///tmp/elastichq-master.zip
+popd
+
 touch '/root/.firstrun/done'
 

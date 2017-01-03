@@ -45,6 +45,7 @@ COPY rsyslog/rules-authpriv.rb /etc/rsyslog.d/rules-authpriv.rb
 
 COPY elasticsearch/logging.yml /etc/elasticsearch/logging.yml
 COPY elasticsearch/logstash-template.json /etc/elasticsearch/templates/logstash.json
+COPY elasticsearch/elastichq-master.zip /tmp/elastichq-master.zip
 
 COPY kibana/config-base.json /root/.firstrun/kibana-config-base.json
 COPY kibana/config-searches.json /root/.firstrun/kibana-config-searches.json
